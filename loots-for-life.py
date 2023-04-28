@@ -17,7 +17,7 @@ while True:
         actual_link = re.search(">https://amzn.to([^<]+)", link).group(0)[1:]
         if actual_link not in new_links:
             if not first_time:
-                os.system("open -a arc " + actual_link)
+                os.system("open " + actual_link)
             print("linkAdded " + actual_link)
             new_links.append(actual_link)
         # sleep for 30 seconds
